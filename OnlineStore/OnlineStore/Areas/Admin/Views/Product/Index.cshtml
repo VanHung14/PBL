@@ -10,7 +10,7 @@
 }
 @using (Html.BeginForm("Sort", "Product", FormMethod.Post))
 {
-    <label>Sắp xếp theo</label>
+    <label>Sắp xếp theo &nbsp;</label>
     <select name="chuoi">
         <option value="masach"> Mã sách </option>
         <option value="maTG"> Mã tác giả </option>
@@ -21,14 +21,14 @@
         <option value="ngaytao"> Ngày tạo </option>
         <option value="trangthai"> Trạng thái </option>
     </select>
-    <button type="submit" class="btn btn-2 ">Sắp xếp</button>
+    <button type="submit" style=" background-color: cadetblue">Sắp xếp</button>
 }
 <div class="row">
     <div class="col-lg-12">
         <div class="card-body">
 
             <div class="table-responsive">
-                <table class="table table-bordered"  width="100%" cellspacing="0">
+                <table class="table table-bordered" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Mã sách</th>
@@ -40,6 +40,7 @@
                             <th>Đơn giá</th>
                             <th>Số lượng</th>
                             <th>Trạng thái</th>
+                            <th>Chỉnh sửa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,14 +49,7 @@
                             <tr id="row_@item.MaSach">
                                 <th>
                                     @item.MaSach
-                                    <a href="/Admin/Product/Edit/@item.MaSach">Sửa</a>
-                                    |
-                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaSach }, new AjaxOptions
-                               {
-                                   Confirm = "Bạn có muốn xóa bản ghi này?",
-                                   OnComplete = "$('#row_" + @item.MaSach + "').remove()",
-                                   HttpMethod = "Delete"
-                               })
+
                                 </th>
                                 <th>@item.MaTacGia</th>
                                 <th>@item.MaLoaiSach</th>
@@ -65,6 +59,16 @@
                                 <th>@item.DonGia</th>
                                 <th>@item.SoLuong</th>
                                 <th>@item.TrangThai</th>
+                                <th>
+                                    <a href="/Admin/Product/Edit/@item.MaSach">Sửa</a>
+                                    |
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaSach }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có muốn xóa bản ghi này?",
+                                   OnComplete = "$('#row_" + @item.MaSach + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
+                                </th>
                             </tr>
                         }
                     </tbody>

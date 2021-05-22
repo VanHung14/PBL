@@ -27,16 +27,44 @@
                     <div class="caption">
                         <div class="name"><h3><a href="/Product/Detail/@item.Product.MaSach">@item.Product.TenSach</a></h3></div>
                         <div class="info">
+
                             <ul>
-                                <li>Mã sách: @item.Product.MaSach</li>
-                                <li>Mã loại sách: @item.Product.MaLoaiSach</li>
+                                <div class="col-md-2">
+                                    <li>Mã sách </li>
+                                </div>
+                                <div class="col-md-10">
+                                    <li>@item.Product.MaSach</li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li>Mã loại sách</li>
+                                </div>
+                                <div class="col-md-10">
+                                    <li> @item.Product.MaLoaiSach</li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li>Đơn giá</li>
+                                </div>
+                                <div class="col-md-10">
+                                    <li> @item.Product.DonGia.GetValueOrDefault(0)</li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li>Số lượng</li>
+                                </div>
+                                <div class="col-md-10">
+                                    <li><input class="form-inline quantity" type="text" id="quantity" value="@item.Quantity"></li>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <li>Thành tiền</li>
+                                </div>
+                                <div class="col-md-10">
+                                    <li>@(item.Quantity*@item.Product.DonGia)</li>
+                                </div>
+                                <hr>
                             </ul>
+
+                            
                         </div>
-                        <div class="price">Đơn giá: @item.Product.DonGia.GetValueOrDefault(0)<span></span></div>
-                        <label>Số lượng: </label><input class="form-inline quantity" type="text" id="quantity" value="@item.Quantity">
-                        
-                        <div class="price">Thành tiền: @(item.Quantity*@item.Product.DonGia)</div>
-                        <hr>
                         @*<a href="#" data-id="@item.Product.MaSach" class="btn-delete">Xóa</a>*@
                         @*<a href="/Cart/DeleteItem/@item.Product.MaSach.Trim()?productId=@item.Product.MaSach.Trim()" class="btn btn-default pull-right">REMOVE</a>
                         <a " href="/Cart/UpdateItem/@item.Product.MaSach.Trim()?productId=@item.Product.MaSach.Trim()&quantity=1" class="btn btn-2 ">Update</a>*@

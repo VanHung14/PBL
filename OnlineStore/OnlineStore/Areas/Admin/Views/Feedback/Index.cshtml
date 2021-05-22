@@ -21,6 +21,7 @@
                             <th>Nội dung</th>
                             <th>Ngày tạo</th>
                             <th>Trạng thái</th>
+                            <th>Chỉnh sửa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,6 +30,13 @@
                             <tr id="row_@item.IdGopY">
                                 <th>
                                     @item.IdGopY
+                                    
+                                </th>
+                                <th>@item.IdUser</th>
+                                <th>@item.NoiDung</th>
+                                <th>@item.NgayTao</th>
+                                <th>@item.TrangThai</th>
+                                <th>
                                     <a href="/Admin/Feedback/Edit/@item.IdGopY">Sửa</a>
                                     |
                                     @Ajax.ActionLink("Xóa", "Delete", new { @id = item.IdGopY }, new AjaxOptions
@@ -38,10 +46,6 @@
                                    HttpMethod = "Delete"
                                })
                                 </th>
-                                <th>@item.IdUser</th>
-                                <th>@item.NoiDung</th>
-                                <th>@item.NgayTao</th>
-                                <th>@item.TrangThai</th>
                             </tr>
                         }
                     </tbody>

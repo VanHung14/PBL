@@ -24,6 +24,7 @@
                             <th>Ngày đặt</th>
                             <th>Tổng tiền</th>
                             <th>Trạng thái</th>
+                            <th>Chỉnh sửa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,16 +33,7 @@
                         <tr id="row_@item.MaDonHang">
                             <th>
                                 @item.MaDonHang
-                                <a href="/Admin/Order/Detail/@item.MaDonHang">Xem</a>
-                                |
-                                <a href="/Admin/Order/Edit/@item.MaDonHang">Sửa</a>
-                                |
-                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaDonHang }, new AjaxOptions
-                           {
-                               Confirm = "Bạn có muốn xóa bản ghi này?",
-                               OnComplete = "$('#row_" + @item.MaDonHang + "').remove()",
-                               HttpMethod = "Delete"
-                           })
+                               
                             </th>
                             <th>@item.IdUser</th>
                             <th>@item.TenNguoiNhan</th>
@@ -52,6 +44,18 @@
                             <th>@item.NgayTao</th>
                             <th>@item.TongTien</th>
                             <th>@item.TrangThai</th>
+                            <th>
+                                <a href="/Admin/Order/Detail/@item.MaDonHang">Xem</a>
+                                |
+                                <a href="/Admin/Order/Edit/@item.MaDonHang">Sửa</a>
+
+                                @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaDonHang }, new AjaxOptions
+                           {
+                               Confirm = "Bạn có muốn xóa bản ghi này?",
+                               OnComplete = "$('#row_" + @item.MaDonHang + "').remove()",
+                               HttpMethod = "Delete"
+                           })
+                            </th>
                         </tr>
                         }
                     </tbody>

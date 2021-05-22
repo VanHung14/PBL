@@ -18,6 +18,7 @@
                         <tr>
                             <th>Mã tác giả</th>
                             <th>Tên tác giả</th>
+                            <th>Chỉnh sửa</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,6 +27,10 @@
                             <tr id="row_@item.MaTacGia.Trim()">
                                 <th>
                                     @item.MaTacGia 
+                                    
+                                </th>
+                                <th>@item.TenTacGia</th>
+                                <th>
                                     <a href="/Admin/Author/Edit/@item.MaTacGia">Sửa</a>
                                     |
                                     @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaTacGia.Trim() }, new AjaxOptions
@@ -35,7 +40,6 @@
                                    HttpMethod = "Delete"
                                })
                                 </th>
-                                <th>@item.TenTacGia</th>
                             </tr>
                         }
                     </tbody>
