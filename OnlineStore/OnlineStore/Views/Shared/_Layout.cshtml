@@ -42,16 +42,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-6">
-                    <select class="language">
-                        <option value="English" selected>English</option>
-                        <option value="France">France</option>
-                        <option value="Germany">Germany</option>
-                    </select>
-                    <select class="currency">
-                        <option value="USD" selected>USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="DDD">DDD</option>
-                    </select>
+                   
                 </div>
                 <div class="col-xs-6">
 
@@ -68,10 +59,10 @@
                     {
                 <ul class="top-link">
                     @*<li>@Html.ActionLink("Tài khoản: " + @session.UserName, "Edit", "User")</li>*@
-                    <li><a href="/User/Edit/@session.UserID">Tài khoản: @session.UserName</a></li>
+                    <li><a href="/User/Edit/@session.UserID"><span class="glyphicon glyphicon-user"></span> Tài khoản: @session.UserName</a></li>
                     @if (session.Status == false)
                     {
-                        <li><a href="/User/Order/@session.UserID">Lịch sử mua hàng</a></li>
+                        <li><a href="/User/Order/@session.UserID"><span class="glyphicon glyphicon-shopping-cart"></span> Lịch sử mua hàng</a></li>
                     }
                     else
                     {
@@ -79,7 +70,7 @@
                     }
 
                     @*<li>@Html.ActionLink("Lịch sử mua hàng", "Edit", "User")</li>*@
-                    <li>@Html.ActionLink("Thoát", "Logout", "User")</li>
+                    <li><span class="glyphicon glyphicon-log-out"></span> @Html.ActionLink("Thoát", "Logout", "User")</li>
                 </ul>
                     }
                 </div>
@@ -95,11 +86,21 @@
             <div class="col-md-4">
                 @using (@Html.BeginForm("Search", "Product", FormMethod.Post))
                 {
-                    <form class="form-search">
-                        <input id="keyword" name="keyword" type="text" class="input-medium search-query">
+                   
+                <form class="form-search">
+                    <div class="row">
+
+                        <div class="col-md-9">
+                            <input id="keyword" size="30" style="height:40px" placeholder="Tìm kiếm" name="keyword" type="text" class="input-medium search-query">
+                        </div>
+
                         @*<a href="/Product/Search?keyword=" class="btn btn-2 pull-right">TÌm kiếm</a>*@
-                        <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
-                    </form>
+                        <div class="col-md-3">
+                            <button type="submit" style="height:40px"  class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+
+                    </div>
+                </form>
                 }
             </div>
             @{Html.RenderAction("HeaderCart", "Home"); }

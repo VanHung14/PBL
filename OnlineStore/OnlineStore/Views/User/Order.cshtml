@@ -22,28 +22,14 @@
                             <th>Ngày đặt</th>
                             <th>Tổng tiền</th>
                             <th>Trạng thái</th>
+                            <th>Chỉnh sửa</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr id="row_@item.MaDonHang">
-                                <th>
-                                    @item.MaDonHang
-                                    <a href="/User/Detail/@item.MaDonHang">Xem</a>
-                                    @*<a href="/Admin/Order/Edit/@item.MaDonHang">Sửa</a>*@
-                                    |
-                                    @if (item.TrangThai == "Chưa xác nhận")
-                                    {
-                                        
-                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaDonHang }, new AjaxOptions
-                               {
-                                   Confirm = "Bạn có muốn xóa bản ghi này?",
-                                   OnComplete = "$('#row_" + @item.MaDonHang + "').remove()",
-                                   HttpMethod = "Delete"
-                               })
-                                    }
-                                </th>
+                                <th>@item.MaDonHang </th>
                                 <th>@item.IdUser</th>
                                 <th>@item.TenNguoiNhan</th>
                                 <th>@item.SDTNguoiNhan</th>
@@ -53,6 +39,21 @@
                                 <th>@item.NgayTao</th>
                                 <th>@item.TongTien</th>
                                 <th>@item.TrangThai</th>
+                                <th>
+                                    <a href="/User/Detail/@item.MaDonHang">Xem</a>
+                                    @*<a href="/Admin/Order/Edit/@item.MaDonHang">Sửa</a>*@
+                                    |
+                                    @if (item.TrangThai == "Chưa xác nhận")
+                                    {
+
+                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.MaDonHang }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có muốn xóa bản ghi này?",
+                                       OnComplete = "$('#row_" + @item.MaDonHang + "').remove()",
+                                       HttpMethod = "Delete"
+                                   })
+                                    }
+                                </th>
                             </tr>
                         }
                     </tbody>
