@@ -15,6 +15,7 @@ namespace Model.Dao
         {
             // sua code feedbackDao
             // sua code vanhung
+            // sua code vanhung1
             db = new OnlineStoreDbContext();
         }
         public IEnumerable<GopY_KH> ListAllPaging(int page, int pageSize)
