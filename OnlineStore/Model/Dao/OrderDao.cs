@@ -13,6 +13,7 @@ namespace Model.Dao
         OnlineStoreDbContext db = null;
         public OrderDao()
         {
+            // sua file OrderDao
             db = new OnlineStoreDbContext();
         }
         public long Insert(DonHang order)
