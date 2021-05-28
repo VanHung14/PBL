@@ -12,6 +12,7 @@ namespace Model.Dao
         OnlineStoreDbContext db = null;
         public ContactDao()
         {
+            // sua code contacdao truong
             db = new OnlineStoreDbContext();
         }
         public long Insert(GopY_KH contact)
