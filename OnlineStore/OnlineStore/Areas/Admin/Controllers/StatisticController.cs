@@ -13,7 +13,7 @@ namespace OnlineStore.Areas.Admin.Controllers
         // GET: Admin/Statistic
         static Statistic s1 = new Statistic();
         public ActionResult Index()
-        {
+        { 
             return View(s1);
         }
         public ActionResult Sum(DateTime firstdate, DateTime lastdate)
