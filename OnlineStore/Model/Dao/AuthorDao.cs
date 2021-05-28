@@ -13,6 +13,7 @@ namespace Model.Dao
         OnlineStoreDbContext db = null;
         public AuthorDao()
         {
+            // sua code thu nhu
             db = new OnlineStoreDbContext();
         }
         public List<TacGia> ListAll()
