@@ -15,6 +15,7 @@ namespace Model.Dao
         {
             // sua file OrderDao
             // sua file lan 2
+            // sua file lan 3
             db = new OnlineStoreDbContext();
         }
         public long Insert(DonHang order)
