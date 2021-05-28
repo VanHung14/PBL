@@ -13,6 +13,7 @@ namespace Model.Dao
         OnlineStoreDbContext db = null;
         public FeedbackDao()
         {
+            // sua code feedbackDao
             db = new OnlineStoreDbContext();
         }
         public IEnumerable<GopY_KH> ListAllPaging(int page, int pageSize)
