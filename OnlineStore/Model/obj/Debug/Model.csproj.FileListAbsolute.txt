@@ -30,3 +30,19 @@ C:\Users\ththo\source\repos\PBL\OnlineStore\Model\obj\Debug\Model.csproj.CoreCom
 C:\Users\ththo\source\repos\PBL\OnlineStore\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\ththo\source\repos\PBL\OnlineStore\Model\obj\Debug\Model.dll
 C:\Users\ththo\source\repos\PBL\OnlineStore\Model\obj\Debug\Model.pdb
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\Model.dll.config
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\Model.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\Model.pdb
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\EntityFramework.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\PagedList.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\PagedList.Mvc.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\EntityFramework.xml
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\PagedList.xml
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\bin\Debug\PagedList.Mvc.xml
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\obj\Debug\Model.dll
+C:\Users\LENOVO\Desktop\New folder (2)\PBL\OnlineStore\Model\obj\Debug\Model.pdb
