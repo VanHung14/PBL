@@ -11,7 +11,7 @@ namespace OnlineStore.Areas.Admin.Controllers
 {
     public class AuthorController : BaseController
     {
-        // GET: Admin/Author 1
+        // GET: Admin/Author 1 haha
         public ActionResult Index(int page = 1, int pageSize = 10)
         {
             var dao = new AuthorDao();
